@@ -9,6 +9,7 @@ const AHEAD := 26
 const BEHIND := 8
 const HOP_TIME := 0.13
 const CHASE_SPEED := 0.4
+const FONT := preload("res://fonts/Pretendard-Bold.otf")
 const CAR_RECT := Rect2(64, 144, 32, 32)
 const ATLAS := preload("res://Tilemap/tilemap_packed.png")
 const PLAYERS := [Rect2(0, 160, 16, 16), Rect2(16, 160, 16, 16), Rect2(0, 144, 16, 16)]
@@ -95,6 +96,7 @@ func _make_label(parent: Node, font_size: int, valign: int, margin: float) -> La
 	var l := Label.new()
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	l.vertical_alignment = valign
+	l.add_theme_font_override("font", FONT)
 	l.add_theme_font_size_override("font_size", font_size)
 	l.add_theme_color_override("font_outline_color", Color("#1d2433"))
 	l.add_theme_constant_override("outline_size", maxi(4, int(font_size / 6.0)))

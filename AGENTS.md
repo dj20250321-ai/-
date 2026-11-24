@@ -4,3 +4,4 @@
 - 조작: 방향키/WASD, 화면 탭(앞으로)과 스와이프. 뒤처지면 사라지는 추격선과 차 충돌로 게임 오버, 최고 기록은 user://save.cfg에 저장.
 - 에셋 위치는 tile 번호(왼→오, 위→아래 12열)로 지정. 차는 2x2 타일(64,144), 캐릭터는 108/120/121번.
 - 이 환경에서는 Godot을 실행해 볼 수 없어 사용자 PC의 Godot에서 확인해야 함.
+- 미리보기: Godot 4.7.2를 ~/.cache/godot에 받아 웹으로 내보내(/tmp/web) 8000 포트로 서비스. 코드를 고치면 `Godot --headless --export-debug Web`로 다시 내보내야 반영됨. 한글 글꼴은 fonts/Pretendard-Bold.otf.
